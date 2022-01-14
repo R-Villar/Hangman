@@ -234,3 +234,10 @@ words = ["aback", "abaft", "abandoned", "abashed", "aberrant", "abhorrent", "abi
          "x-ray", "yak", "yam", "yard", "yarn", "yawn", "year", "yell", "yellow", "yielding", "yoke", "young",
          "youthful", "yummy", "zany", "zealous", "zebra", "zephyr", "zesty", "zinc", "zip", "zipper", "zippy", "zonked",
          "zoo", "zoom"]
+
+math_words = ['subtraction', 'subtract', 'minus', 'less', 'difference', 'decrease', 'deduct']
+
+animals_words = ['crow', 'peacock', 'dove', 'sparrow', 'goose', 'stork', 'pigeon', 'turkey', 'hawk', 'raven', 'parrot']
+
+cars_words = ['acura', 'bmw', 'toyota', 'dodge', 'jeep', 'ford', 'honda']
+
