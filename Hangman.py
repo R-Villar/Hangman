@@ -1,18 +1,39 @@
 import random
 import string
-from words_list import words
+from words_list import words, cars_words, animals_words, math_words
 
 
-def get_valid_word(words):
-    word = random.choice(words)
+def get_category(word_cat):
+    while True:
+        player_choice = input('choose a word category, use A (Animals), C (Cars), M (Math), R (Random): ')\
+            .strip().lower()
+        if player_choice == 'a':
+            word_cat = animals_words
+            break
+        if player_choice == 'c':
+            word_cat = cars_words
+            break
+        if player_choice == 'm':
+            word_cat = math_words
+            break
+        if player_choice == 'r':
+            word_cat = words
+            break
+        else:
+            print(f'{player_choice} is not a valid option, please try again')
+            continue
+    return word_cat
+
+
+def get_valid_word(word):
+    word = random.choice(get_category(word_cat=word))
     while '-' in word or ' ' in word:
-        word = random.choice(words)
-
+        random.choice(get_category(word_cat=word))
     return word
 
 
 def hangman():
-    word = get_valid_word(words)
+    word = get_valid_word(word=True)
     word_letters = set(word)  # letters in the word
     alphabet = set(string.ascii_lowercase)
     used_letters = set()  # what the user has guessed
